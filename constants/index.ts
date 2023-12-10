@@ -41,7 +41,7 @@ export const NAV_LINKS = [
     {
       title: 'Many new locations every month',
       icon: '/location.svg',
-      variant: 'orange',
+      variant: 'green',
       description:
         'Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing',
     },
@@ -68,19 +68,39 @@ export const NAV_LINKS = [
   
   export const FOOTER_CONTACT_INFO = {
     title: 'Contact Us',
-    links: [
-      { label: 'Admin Officer', value: '123-456-7890' },
-      { label: 'Email Officer', value: 'hilink@akinthil.com' },
-    ],
+
+    phone: {
+      label: 'Phone:', value: '123-456-7890'
+    },
+    email: {
+      label: 'Email:', value: 'hilink@akinthil.com'
+    }
+   
   };
   
   export const SOCIALS = {
     title: 'Social',
     links: [
-      '/facebook.svg',
-      '/instagram.svg',
-      '/twitter.svg',
-      '/youtube.svg',
-      '/wordpress.svg',
+      { 
+        link: 'https://facebook.com/',
+        image: '/facebook.svg',
+        label: 'Facebook Account'
+      },
+      { 
+        link: 'https://instagram.com/',
+        image: '/instagram.svg',
+        label: 'Instagram Account'
+      },
+      { 
+        link: 'https://twitter.com/',
+        image: '/twitter.svg',
+        label: 'Twitter Account'
+      },
+      { 
+        link: 'https://www.youtube.com/',
+        image: '/youtube.svg', 
+        label: 'YouTube Account'
+      },
+        
     ],
   };
