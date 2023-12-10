@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Button from "./Button"
+import Link from "next/link"
 
 const Hero = () => {
     return (
@@ -39,12 +40,11 @@ const Hero = () => {
                  </div>
 
                  <div className="flex flex-col w-full gap-3 sm:flex-row">
-                    <Button 
-                        type="button" title="Download App" variant="btn_green"
-                    />
-                    <Button 
-                        type="button" title="How we work?" variant="btn_white_text"
-                    />
+
+                    <a href="https://play.google.com/store/apps?hl=en&gl=US" target="_blank" className="flexCenter gap-3 rounded-full border cursor-pointer btn_green">Download App</a>
+
+                    <Link href="#" className="flexCenter gap-3 rounded-full border cursor-pointer btn_white_text">How we work?</Link>
+
                  </div>
             </div>
 
