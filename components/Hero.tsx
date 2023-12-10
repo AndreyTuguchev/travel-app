@@ -16,12 +16,12 @@ const Hero = () => {
                     height={50}
                     className="absolute left-[7px] top-[-30px] w-10 lg:w-[50px] sm:left-[0px]"
                  />
-                 <h1 className="bold-52 lg:bold-88">Amazing Super Camp Area</h1>
-                 <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
+                 <h1 className="bold-52 lg:bold-88">Amazing Camp Area</h1>
+                 <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px] mdmax:min-h-[120px]">
                     We want to be on each of your journeys seeking the satisfaction of seeing the incorruptible beauty of nature. We can help you on an adventure around the world in just one app
                  </p>
                  <div className="my-11 flex flex-wrap gap-5">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 mdmax:w-full">
                         {Array(5).fill(1).map(() => (
                             <Image 
                                 src="/star.svg"
@@ -42,7 +42,7 @@ const Hero = () => {
 
                     <a href="#get-app" aria-label="Download App" className="flexCenter gap-3 rounded-full border cursor-pointer btn_green">Download App</a>
 
-                    <Link href="#" className="flexCenter gap-3 rounded-full border cursor-pointer btn_white_text" aria-label="How We work">How we work?</Link>
+                    {/* <Link href="#" className="flexCenter gap-3 rounded-full border cursor-pointer btn_white_text" aria-label="How We work">How we work?</Link> */}
 
                  </div>
             </div>
