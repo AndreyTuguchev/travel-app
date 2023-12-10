@@ -17,6 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload"  href="/pattern-bg.png" as="image" />
+        <link rel="preload"  href="/camp.svg" as="image" />
+        <link rel="preload"  href="/hilink-logo.svg" as="image" />
+      </head>
       <body >
         <Navbar />
         <main className='relative'>
