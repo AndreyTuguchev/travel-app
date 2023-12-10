@@ -38,6 +38,7 @@ module.exports = {
       },
       screens: {
         xs: '400px',
+        'mdmax': {'max': '767px'},
         '3xl': '1680px',
         '4xl': '2200px',
       },

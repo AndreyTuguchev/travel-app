@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const GetApp = () => {
     return (
-        <section id="get-app" className="lazyload-bg flexCenter w-full flex-col pb-[100px]">
+        <section data-value="get-app" id="get-app" className="lazyload-bg flexCenter w-full flex-col pb-[100px]">
             <div className="get-app">
                 <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-20">
                     <h2 className="bold-40 lg:bold-64 xl:max-w-[320px]">Get for free now!</h2>
