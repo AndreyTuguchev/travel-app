@@ -41,7 +41,7 @@ const Hero = () => {
 
                  <div className="flex flex-col w-full gap-3 sm:flex-row">
 
-                    <a href="https://play.google.com/store/apps?hl=en&gl=US" target="_blank" className="flexCenter gap-3 rounded-full border cursor-pointer btn_green">Download App</a>
+                    <a href="#get-app" className="flexCenter gap-3 rounded-full border cursor-pointer btn_green">Download App</a>
 
                     <Link href="#" className="flexCenter gap-3 rounded-full border cursor-pointer btn_white_text">How we work?</Link>
 
@@ -55,7 +55,7 @@ const Hero = () => {
                     <div className="flex flex-col">
                         <div className="flexBetween">
                             <p className="regular-16 text-gray-20">Location</p>
-                            <Image src="/close.svg" alt="" width={24} height={24} />
+                            {/* <Image src="/close.svg" alt="" width={24} height={24} /> */}
                         </div>
 
                         <p className="bold-20 text-white">Aguas Calientes</p>
