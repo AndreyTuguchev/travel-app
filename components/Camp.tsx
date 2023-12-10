@@ -15,7 +15,8 @@ const CampSite = ({backgroundImage, title, subtitle, peopleJoined }: CampProps) 
                 <div className="flexCenter gap-4">
                     <div className="rounded-full bg-green-50 p-4">
                         <Image 
-                            src="/folded-map.svg"
+                            src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+                            data-src="/folded-map.svg"
                             alt="map"
                             width={28}
                             height={28}
@@ -32,7 +33,8 @@ const CampSite = ({backgroundImage, title, subtitle, peopleJoined }: CampProps) 
                         {PEOPLE_URL.map((url) => (
                             <Image className="inline-block h-10 w-10 rounded-full"
                                 key={crypto.randomUUID()}
-                                src={url}
+                                src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+                                data-src={url}
                                 alt="person joined"
                                 width={52}
                                 height={52}
@@ -74,7 +76,7 @@ const Camp = () => {
                         alt='camp-2'
                         width={186}
                         height={219}
-                        className="camp-quote lazyload"
+                        className="camp-quote"
                     />
                 </div>
             </div>

@@ -2,23 +2,6 @@
 
 import { useEffect } from "react"
 
-
-const LazyLoadImages = () =>{
-    // document.querySelectorAll('.lazyload').forEach((image)=>{
-    //   console.log(image)
-    //   console.log(image.dataset)
-    //   if("" !== image.dataset.src && image.classList.contains("lazyload")){
-    //     image.src = image.dataset.src
-    //     image.classList.add("lazyloaded")
-    //     image.classList.remove("lazyload")
-    //   }
-    // })
-
-
-}
-  
-
-
 const Footer = () => {
 
     useEffect(()=>{
