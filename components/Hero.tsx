@@ -41,9 +41,9 @@ const Hero = () => {
 
                  <div className="flex flex-col w-full gap-3 sm:flex-row">
 
-                    <a href="#get-app" className="flexCenter gap-3 rounded-full border cursor-pointer btn_green">Download App</a>
+                    <a href="#get-app" aria-label="Download App" className="flexCenter gap-3 rounded-full border cursor-pointer btn_green">Download App</a>
 
-                    <Link href="#" className="flexCenter gap-3 rounded-full border cursor-pointer btn_white_text">How we work?</Link>
+                    <Link href="#" className="flexCenter gap-3 rounded-full border cursor-pointer btn_white_text" aria-label="How We work">How we work?</Link>
 
                  </div>
             </div>

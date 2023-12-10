@@ -29,7 +29,8 @@ const Navbar = () => {
             </ul>
 
             <Image 
-                src="menu.svg" 
+                src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+                data-src="menu.svg" 
                 alt='menu' 
                 width={32} 
                 height={32} 
