@@ -7,14 +7,34 @@ import { useEffect } from "react"
 
 const Footer = () => {
 
+
+    const mobileMenuClick = (e : any )=>{
+        if ( e.target instanceof HTMLElement){
+            if (document.querySelector('.top-menu-ul')?.classList.contains("opened")){
+                document.querySelector('.top-menu-ul')?.classList.remove("opened");
+            }else{
+                document.querySelector('.top-menu-ul')?.classList.add("opened");
+            }
+        }
+    }
+
     useEffect(()=>{
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', mobileMenuClick)
+        return ()=>{
+            document.querySelector('.mobile-menu-toggle')?.removeEventListener("click", mobileMenuClick);
+        }
+    }, [])
+
+    useEffect(()=>{
+
+
+
+
         let imageObserver = new IntersectionObserver(function(entries, callback) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     let lazyImage = entry.target;
                     if ( lazyImage instanceof HTMLImageElement){
-
-                        console.log("lazyImage.dataset.src ", lazyImage.dataset.src)
                         if (lazyImage.dataset){
                             if ( lazyImage.dataset.src !== undefined && lazyImage.dataset.src.indexOf("data:image") === -1 && lazyImage?.src.indexOf("data:image") !== -1 ){
                                 lazyImage.src = lazyImage.dataset.src
