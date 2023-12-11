@@ -18,9 +18,17 @@ const Footer = () => {
         }
     }
 
+    const scroolToSection = (e : any )=>{
+        if ( e.target instanceof HTMLElement){
+            e.target.scrollIntoView();            
+        }
+    }
+
     useEffect(()=>{
+        document.querySelector('#get-app')?.addEventListener('click', scroolToSection)
         document.querySelector('.mobile-menu-toggle')?.addEventListener('click', mobileMenuClick)
         return ()=>{
+            document.querySelector('#get-app')?.removeEventListener('click', scroolToSection)
             document.querySelector('.mobile-menu-toggle')?.removeEventListener("click", mobileMenuClick);
         }
     }, [])
