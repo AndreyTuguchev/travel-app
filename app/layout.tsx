@@ -18,6 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preload" href="/fonts/inter-v13-latin-700.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="preload" href="/fonts/inter-v13-latin-400.woff2" as="font" type="font/woff2" crossOrigin="" />
+
         <link rel="preload"  href="/pattern-bg.png" as="image" />
         <link rel="preload"  href="/camp.svg" as="image" />
         <link rel="preload"  href="/hilink-logo.svg" as="image" />
