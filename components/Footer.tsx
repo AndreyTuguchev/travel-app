@@ -24,11 +24,29 @@ const Footer = () => {
         }
     }
 
+    const forceLoadImages = (sectionName : any) => {
+        document.querySelectorAll(sectionName + ' img[src*="data:image"]').forEach((lazyImage)=>{
+            if ( lazyImage instanceof HTMLImageElement){
+                if (lazyImage.dataset){
+                    if ( lazyImage.dataset.src !== undefined && lazyImage.dataset.src.indexOf("data:image") === -1 && lazyImage?.src.indexOf("data:image") !== -1 ){
+                        lazyImage.src = lazyImage.dataset.src
+                        lazyImage.classList.remove("lazyload");
+                        lazyImage.classList.add("lazyloaded");
+                    }
+                }
+            }
+        })
+    }
+
     useEffect(()=>{
-        document.querySelector('#get-app')?.addEventListener('click', scroolToSection)
+        document.querySelector('a[href="#get-app"]')?.addEventListener('click', function() { 
+            forceLoadImages('#get-app');
+        }, {once: true} )
+
+        document.querySelector('a[href="#get-app"]')?.addEventListener('click', scroolToSection)
         document.querySelector('.mobile-menu-toggle')?.addEventListener('click', mobileMenuClick)
         return ()=>{
-            document.querySelector('#get-app')?.removeEventListener('click', scroolToSection)
+            document.querySelector('a[href="#get-app"]')?.removeEventListener('click', scroolToSection)
             document.querySelector('.mobile-menu-toggle')?.removeEventListener("click", mobileMenuClick);
         }
     }, [])
