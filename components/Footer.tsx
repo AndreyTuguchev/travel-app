@@ -18,10 +18,8 @@ const Footer = () => {
         }
     }
 
-    const scroolToSection = (e : any )=>{
-        if ( e.target instanceof HTMLElement){
-            e.target.scrollIntoView();            
-        }
+    const scroolToSection = (sectionId : any )=>{
+        document.querySelector( sectionId ).scrollIntoView();
     }
 
     const forceLoadImages = (sectionName : any) => {
@@ -38,15 +36,16 @@ const Footer = () => {
         })
     }
 
+    
     useEffect(()=>{
         document.querySelector('a[href="#get-app"]')?.addEventListener('click', function() { 
             forceLoadImages('#get-app');
         }, {once: true} )
 
-        document.querySelector('a[href="#get-app"]')?.addEventListener('click', scroolToSection)
+        document.querySelector('a[href="#get-app"]')?.addEventListener('click', function(){scroolToSection('#get-app')})
         document.querySelector('.mobile-menu-toggle')?.addEventListener('click', mobileMenuClick)
         return ()=>{
-            document.querySelector('a[href="#get-app"]')?.removeEventListener('click', scroolToSection)
+            document.querySelector('a[href="#get-app"]')?.removeEventListener('click', function(){scroolToSection('#get-app')})
             document.querySelector('.mobile-menu-toggle')?.removeEventListener("click", mobileMenuClick);
         }
     }, [])
